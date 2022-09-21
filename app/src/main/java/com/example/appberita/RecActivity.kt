@@ -34,5 +34,11 @@ class RecActivity : AppCompatActivity() {
                 LinearLayoutManager(this@RecActivity)
             }
         }
+
+        // get data
+        beritaViewModel.getDataBerita()
+        beritaViewModel.listBerita.observe(this){
+            beritaAdapter.setDataBeritas(it)
+        }
     }
 }

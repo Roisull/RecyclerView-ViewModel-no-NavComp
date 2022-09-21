@@ -1,13 +1,10 @@
 package com.example.appberita.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.appberita.R
 import com.example.appberita.databinding.CardViewBeritaBinding
 import com.example.appberita.model.ModelBerita
-import kotlinx.android.synthetic.main.card_view_berita.view.*
 
 class BeritaAdapter(var data: MutableList<ModelBerita>): RecyclerView.Adapter<BeritaAdapter.ViewHolder>() {
 
@@ -34,4 +31,9 @@ class BeritaAdapter(var data: MutableList<ModelBerita>): RecyclerView.Adapter<Be
     }
 
     override fun getItemCount(): Int = data.size
+
+    // set data
+    fun setDataBeritas(datas: MutableList<ModelBerita>){
+        this.data = datas
+    }
 }
